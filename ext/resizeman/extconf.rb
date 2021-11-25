@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-require "mkmf"
+require "fileutils"
 
-create_makefile("resizeman/resizeman")
+FileUtils.cp_r("#{__dir__}/.", Dir.pwd.to_s)
