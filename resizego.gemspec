@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/resizeman/version"
+require_relative "lib/resizego/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "resizeman"
-  spec.version       = Resizeman::VERSION
+  spec.name          = "resizego"
+  spec.version       = Resizego::VERSION
   spec.authors       = ["shoma07"]
   spec.email         = ["23730734+shoma07@users.noreply.github.com"]
 
-  spec.summary       = "resizeman"
-  spec.description   = "resizeman"
-  spec.homepage      = "https://github.com/shoma07/resizeman"
+  spec.summary       = "resizego"
+  spec.description   = "resizego"
+  spec.homepage      = "https://github.com/shoma07/resizego"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.extensions    = ["ext/resizeman/extconf.rb"]
+  spec.extensions    = ["ext/resizego/extconf.rb"]
 
   spec.add_dependency "ffi"
 

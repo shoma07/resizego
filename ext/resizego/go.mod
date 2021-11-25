@@ -1,4 +1,4 @@
-module github.com/shoma07/resizeman
+module github.com/shoma07/resizego
 
 go 1.17
 

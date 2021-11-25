@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    resizeman (0.1.0)
+    resizego (0.1.0)
       ffi
 
 GEM
@@ -56,7 +56,7 @@ PLATFORMS
 DEPENDENCIES
   rake
   rake-compiler
-  resizeman!
+  resizego!
   rspec
   rubocop
   rubocop-rake

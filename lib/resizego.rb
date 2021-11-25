@@ -2,16 +2,16 @@
 
 require "ffi"
 require "base64"
-require_relative "resizeman/version"
+require_relative "resizego/version"
 
-# Resizeman
-module Resizeman
+# Resizego
+module Resizego
   # Resizeman::Error
   class Error < StandardError; end
 
   extend FFI::Library
 
-  ffi_lib File.expand_path("resizeman/resizeman.bundle", __dir__)
+  ffi_lib File.expand_path("resizego/resizego.bundle", __dir__)
 
   attach_function :resize64, %i[string int], :string
 

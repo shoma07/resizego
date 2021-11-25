@@ -13,8 +13,8 @@ require "rake/extensiontask"
 
 task build: :compile
 
-Rake::ExtensionTask.new("resizeman") do |ext|
-  ext.lib_dir = "lib/resizeman"
+Rake::ExtensionTask.new("resizego") do |ext|
+  ext.lib_dir = "lib/resizego"
 end
 
 task default: %i[clobber compile spec rubocop]

@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in resizeman.gemspec
+# Specify your gem's dependencies in resizego.gemspec
 gemspec
 
 gem "rake"
