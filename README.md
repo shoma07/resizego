@@ -22,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+File.write('after.jpg', Resizeman.resize(File.binread('before.jpg'), 300))
+```
 
 ## Development
 
