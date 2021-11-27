@@ -28,6 +28,12 @@ Or install it yourself as:
 File.write('after.jpg', Resizego.resize(File.binread('before.jpg'), 300))
 ```
 
+### Command Line
+
+```sh
+$ bundle exec resizego --resize 600 --quality 100 before.jpg > after.jpg
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
