@@ -6,7 +6,7 @@ require_relative "resizego/version"
 
 # Resizego
 module Resizego
-  # Resizeman::Error
+  # Resizego::Error
   class Error < StandardError; end
 
   extend FFI::Library
