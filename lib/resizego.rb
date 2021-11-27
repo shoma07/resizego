@@ -13,15 +13,18 @@ module Resizego
 
   ffi_lib File.expand_path("resizego/resizego.bundle", __dir__)
 
-  attach_function :resize64, %i[string int], :string
+  attach_function :resize64, %i[string int int], :string
 
   class << self
+    private :resize64
+
     # @param blob [String]
     # @param limit [Integer]
+    # @param quality [Integer]
     # @return [String]
     # @raise [Error]
-    def resize(blob, limit)
-      Base64.decode64(resize64(Base64.encode64(blob), limit))
+    def resize(blob, limit, quality: 100)
+      Base64.decode64(resize64(Base64.encode64(blob), limit, quality))
     rescue StandardError
       raise Error, "resize error"
     end
