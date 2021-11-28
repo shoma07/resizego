@@ -6,6 +6,7 @@
 /pkg/
 /spec/reports/
 /tmp/
+/vendor/
 *.bundle
 *.so
 *.o
@@ -15,3 +16,6 @@ mkmf.log
 
 # rspec failure tracking
 .rspec_status
+
+/benchmark/images/*
+!/benchmark/images/.keep
