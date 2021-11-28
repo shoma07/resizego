@@ -11,16 +11,12 @@ Currently, the only supported format is JPG.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'resizego'
+gem 'resizego', git: 'https://github.com/shoma07/resizego.git'
 ```
 
 And then execute:
 
     $ bundle install
-
-Or install it yourself as:
-
-    $ gem install resizego
 
 ## Usage
 
