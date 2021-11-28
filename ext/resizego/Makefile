@@ -1,5 +1,5 @@
 build:
-	go build -buildmode=c-shared -o resizego.bundle main.go
+	go build -buildmode=c-shared -o resizego.so main.go
 
 # fake out clean and install
 clean:

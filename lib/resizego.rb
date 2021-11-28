@@ -11,7 +11,7 @@ module Resizego
 
   extend FFI::Library
 
-  ffi_lib File.expand_path("resizego/resizego.bundle", __dir__)
+  ffi_lib File.expand_path("resizego/resizego.so", __dir__)
 
   attach_function :resize64, %i[string int int], :string
 

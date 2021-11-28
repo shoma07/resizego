@@ -1,13 +1,17 @@
 package main
 
+/*
+#include <stdlib.h>
+*/
+import "C"
 import (
-	"C"
 	"bytes"
 	"encoding/base64"
 	"image"
 	"image/jpeg"
 	"io"
 	"math"
+	"unsafe"
 
 	"github.com/rwcarlsen/goexif/exif"
 	"golang.org/x/image/draw"
@@ -43,7 +47,10 @@ func resize64(blob *C.char, limit int, quality int) *C.char {
 
 	jpeg.Encode(w, dst, &jpeg.Options{Quality: quality})
 
-	return C.CString(base64.StdEncoding.EncodeToString(w.Bytes()))
+	cstr := C.CString(base64.StdEncoding.EncodeToString(w.Bytes()))
+	defer C.free(unsafe.Pointer(cstr))
+
+	return cstr
 }
 
 func readOrientation(r io.Reader) int {
@@ -64,6 +71,8 @@ func readOrientation(r io.Reader) int {
 
 func applyOrientation(i image.Image, o int) image.Image {
 	switch o {
+	case 1:
+		return i
 	case 2:
 		return fixTopRight(i)
 	case 3:
