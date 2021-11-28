@@ -8,7 +8,6 @@ gemspec
 gem "mini_magick"
 gem "posix-spawn"
 gem "rake"
-gem "rake-compiler"
 gem "rspec"
 gem "rubocop"
 gem "rubocop-rake"

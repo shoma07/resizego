@@ -17,8 +17,6 @@ GEM
     posix-spawn (0.3.15)
     rainbow (3.0.0)
     rake (13.0.6)
-    rake-compiler (1.1.1)
-      rake
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec (3.10.0)
@@ -60,7 +58,6 @@ DEPENDENCIES
   mini_magick
   posix-spawn
   rake
-  rake-compiler
   resizego!
   rspec
   rubocop
