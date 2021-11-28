@@ -9,12 +9,10 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-require "rake/extensiontask"
+task :compile do
+  system("cd #{File.expand_path(__dir__)}; ruby ext/resizego/extconf.rb")
+end
 
 task build: :compile
-
-Rake::ExtensionTask.new("resizego") do |ext|
-  ext.lib_dir = "lib/resizego"
-end
 
 task default: %i[clobber compile spec rubocop]

@@ -9,6 +9,7 @@
 /vendor/
 *.bundle
 *.so
+*.h
 *.o
 *.a
 mkmf.log
